@@ -42,7 +42,7 @@ def imshow(img, size=5, cmap='jet'):
     plt.axis('off')
     plt.show()
 
-@app.route("/predict1", methods=["POST"])
+@app.route("/predict3", methods=["POST"])
 def process_image1():
     file = request.files['file']
     img_bytes = file.read()
@@ -56,8 +56,6 @@ def process_image1():
     image_size = 300  # Can be tuned, works best when the face width is between 200~250 px
 
     model = Generator().eval().to(device)
-
-
     ckpt = torch.load("checkpoint/generator_celeba_distill.pt", map_location=device)
     model.load_state_dict(ckpt)
 
@@ -75,7 +73,7 @@ def process_image1():
 
     return send_file(filename, mimetype='image/gif')
 
-@app.route("/predict2", methods=["POST"])
+@app.route("/predict1", methods=["POST"])
 def process_image2():
     file = request.files['file']
     img_bytes = file.read()
@@ -107,7 +105,7 @@ def process_image2():
 
     return send_file(filename, mimetype='image/gif')
 
-@app.route("/predict3", methods=["POST"])
+@app.route("/predict2", methods=["POST"])
 def process_image3():
     file = request.files['file']
     img_bytes = file.read()
