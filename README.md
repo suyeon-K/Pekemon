@@ -1,4 +1,4 @@
-# Pekemon
+# Pekemon()
 
 Team Header : [곽수연](https://github.com/suyeon-K)
 
