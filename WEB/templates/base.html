@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+{% include 'head.html' %}
+
+<body>
+
+{% include 'header.html' %}
+
+    <div class="inside_hr">
+        {% block content %}
+
+        {% endblock %}
+        <p class="team_name">Made by 참새에 방앗GAN</p>
+        {#    static java link#}
+        <script type="text/javascript" src="{% static 'javascript/allfunc.js' %}"></script>
+    </div>
+
+
+</body>
+</html>

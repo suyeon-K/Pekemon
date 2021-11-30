@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <section class="pekecontainer">
+
+      <div class="peke_frame">
+        <div class="stat_img">
+          <img src="/static/image/main_stat.png">
+        </div>
+        <div class="banner_img">
+          <img src="/static/image/pecat.png">
+        </div>
+        <div class="text_container">
+          <div class="text_box1">
+            <div class="text_p">반려동물과 <br><br>이모티콘 만들러 가기!</div>
+          </div>
+          <div class="text_box2">
+            <div class="go"><a href="{% url 'FirstService:select' %}">GO !</a></div>
+            <div class="go">YES !</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="team_container">
+
+      </div> -->
+    </section>
+
+
+{% endblock content %}
